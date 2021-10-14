@@ -1,64 +1,55 @@
+package com.pb.boichuk.hw2;
+
 import java.util.Scanner;
 
 public class Calculator {
-    static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int operand1 = getInt();
-        char sign = getsign();
-        int operand2 = getInt();
-        int result = calc(operand1, operand2, sign);
-        System.out.println("Результат операции: " + result);
-    }
 
-    public static int getInt(){
-        System.out.println("Введите число: ");
-        int operand;
-        if(scanner.hasNextInt()){
-            operand = scanner.nextInt();
-        } else {
-            System.out.println("Вы допустили ошибку при вводе числа.");
-            scanner.next();
-            operand = getInt();
-        }
-        return operand;
-    }
-
-    public static char getsign(){
-        System.out.println("Введите операцию: ");
         char sign;
-        if(scanner.hasNext()){
-            sign = scanner.next().charAt(0);
-        } else {
-            System.out.println("Вы допустили ошибку при вводе операции.");
-            scanner.next();
-            sign = getsign();
-        }
-        return sign;
-    }
+        int operand1, operand2, result;
 
-    public static int calc(int operand1, int operand2, char sign) {
-        int result;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Введите первое число: ");
+        operand1 = input.nextInt();
+
+        System.out.println("Выберите знак: +, -, *, или /");
+        sign = input.next().charAt(0);
+
+        System.out.println("Введите второе число");
+        operand2 = input.nextInt();
+
         switch (sign) {
+
             case '+':
-                result = operand1+operand2;
+                result = operand1 + operand2;
+                System.out.println(operand1 + " + " + operand2 + " = " + result);
                 break;
+
             case '-':
-                result = operand1-operand2;
+                result = operand1 - operand2;
+                System.out.println(operand1 + " - " + operand2 + " = " + result);
                 break;
+
             case '*':
-                result = operand1*operand2;
+                result = operand1 * operand2;
+                System.out.println(operand1 + " * " + operand2 + " = " + result);
                 break;
+
             case '/':
-                if (operand2 != 0)
-                    result = operand1/operand2;
-                else
-                    System.out.println("На ноль делить некрасиво :/");
+                if (operand2 != 0) {
+                    result = operand1 / operand2;
+                    System.out.println(operand1 + " / " + operand2 + " = " + result);
+                } else
+                    System.out.println("На ноль делить некрасиво! :/");
                 break;
+
             default:
-                System.out.println("Операция не распознана. Повторите ввод.");
-                result = calc(operand1, operand2, getsign());
+                System.out.println("Некорректный знак!");
+                break;
         }
-        return result;
+
+        input.close();
     }
 }
