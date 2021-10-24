@@ -3,6 +3,7 @@ package com.pb.boichuk.hw2;
 import java.util.Scanner;
 
 public class Calculator {
+
     public static void main(String[] args) {
 
         char sign;
