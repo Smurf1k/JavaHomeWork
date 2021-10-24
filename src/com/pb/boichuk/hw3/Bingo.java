@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class  Bingo {
     public static void main(String[] args) {
-        int number = (int) (Math.random() * 100 + 1);
+        int number = (int) (Math.random() * 1000 + 1);
         int attempts = 1;
 
         System.out.println("===[ НАЧАЛО ИГРЫ ]===");
-        System.out.println("Было загадано число (от 1 до 100): ");
+        System.out.println("Было загадано число (от 1 до 1000): ");
         System.out.println("Для досрочного завершения введите - \"0\".");
 
         while (true) {
@@ -16,7 +16,7 @@ public class  Bingo {
             System.out.print("> ");
             int gessnumber = sc.nextInt();
 
-            if (gessnumber >= 0 && gessnumber <= 100) {
+            if (gessnumber >= 0 && gessnumber <= 1000) {
                 if (gessnumber == 0) {
                     System.out.println("===[ ИГРА ОКОНЧЕНА ]===");
                     System.out.println("Вы досрочно завершили игру.");
