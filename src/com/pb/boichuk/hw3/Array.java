@@ -18,10 +18,11 @@ public class Array {
         }
 
         System.out.println("Введенный массив: ");
-        for(int i = 0; i < len; i++){
-            System.out.print("[" + array[i] + "] ");
+        for (int j : array) {
+            System.out.print("[" + j + "] ");
         }
 
+        // Сортировка
         boolean Sorted = false;
         while (!Sorted) {
             Sorted = true;
@@ -35,11 +36,13 @@ public class Array {
             }
         }
 
+        // Вывод отсортированого массива
         System.out.println("\nОтсортированный массив: ");
-        for(int i = 0; i < len; i++){
-            System.out.print("[" + array[i] + "] ");
+        for (int j : array) {
+            System.out.print("[" + j + "] ");
         }
 
+        // Подсчет суммы значений массива
         for(int i=0; i < x; i++){
             sum = sum + array[i];
         }
