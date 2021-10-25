@@ -36,7 +36,7 @@ public class Array {
             }
         }
 
-        // Вывод отсортированого массива
+        // Вывод отсортированного массива
         System.out.println("\nОтсортированный массив: ");
         for (int j : array) {
             System.out.print("[" + j + "] ");
