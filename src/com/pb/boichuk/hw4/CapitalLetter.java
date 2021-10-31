@@ -1,20 +1,27 @@
 package com.pb.boichuk.hw4;
 
-public class CapitalLetter {
-    public static void replaceSpaceToDot() {
-        String str = "1 000 000 000";
-        //преобразовываем строку в массив
-        char[] chArray = str.toCharArray();
-        //перебираем все элементы массива
-        for (int i = 0; i < chArray.length; i++) {
-            //находим пробел
-            if (chArray[i] == ' ') {
-                //заменяем на точку
-                chArray[i] = '.';
+import java.util.Scanner;
 
-            }
+public class CapitalLetter {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введи свою строку: ");
+        String str = in.nextLine();
+
+        String words[]=str.split("\\s");
+        String capitalStr="";
+
+        for(String word : words){
+            String firstLetter=word.substring(0,1);
+            String remainingLetters=word.substring(1);
+            capitalStr+=firstLetter.toUpperCase()+remainingLetters+" ";
         }
-        //выводим результат
-        System.out.println(chArray);
+
+        System.out.println("Введенная вами строка: ");
+        System.out.println("> " + str);
+        System.out.println("Строка с верхним регистром: ");
+        System.out.println("> " + capitalStr);
+        in.close();
     }
 }
