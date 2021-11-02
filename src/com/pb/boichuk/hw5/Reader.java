@@ -59,6 +59,31 @@ public class Reader {
         this.telephoneNumber = telephoneNumber;
     }
 
+    public void takeBook(String FIO){
+        System.out.println(FIO + " взял 3 книги");
+    }
+
+    public void takeBook(String FIO, String faculty){
+        System.out.println(FIO + faculty + " взял книги: Приключения, Словарь, Энциклопедия");
+    }
+
+    public void takeBook(String FIO, String faculty, String telephoneNumber){
+        System.out.println(FIO + telephoneNumber + " взял книги: Приключения (Иванов И. И. 2000 г.), Словарь (Сидоров А. В 1980 г.), Энциклопедия (Гусев К. В. 2010 г.)");
+    }
+
+    public void returnBook(String FIO){
+        System.out.println(FIO + " вернул 3 книги");
+    }
+
+    public void returnBook(String FIO, String faculty){
+        System.out.println(FIO + faculty + " вернул книги: Приключения, Словарь, Энциклопедия");
+    }
+
+    public void returnBook(String FIO, String faculty, String telephoneNumber){
+        System.out.println(FIO + telephoneNumber + " вернул книги: Приключения (Иванов И. И. 2000 г.), Словарь (Сидоров А. В 1980 г.), Энциклопедия (Гусев К. В. 2010 г.)");
+    }
+
+
     String getInfo() {
         return "[ФИО: " + FIO + ", номер читательского билета: "
                 + numberRTicket + ", факультет: " + faculty + ", дата рождения: "

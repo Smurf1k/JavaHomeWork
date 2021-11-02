@@ -23,6 +23,9 @@ public class Library {
         System.out.println(book3.getInfo());
 
         System.out.println(reader1.getInfo());
+
+        reader1.takeBook("Петров В. В.");
+        reader1.returnBook("Петров В. В.");
     }
 }
 
