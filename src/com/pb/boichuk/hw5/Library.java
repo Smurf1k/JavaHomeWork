@@ -21,6 +21,8 @@ public class Library {
         System.out.println(book1.getInfo());
         System.out.println(book2.getInfo());
         System.out.println(book3.getInfo());
+
+        System.out.println(reader1.getInfo());
     }
 }
 

@@ -2,12 +2,12 @@ package com.pb.boichuk.hw5;
 
 public class Reader {
     private String FIO = "Петров В. В."; // ФИО
-    private int numberRTicket = "000001";  // номер читательского билета
+    private String numberRTicket = "000001";  // номер читательского билета
     private String faculty = "названиеФакультета";  // факультет
     private String dateOfBirth = "01.01.1990"; // дата рождения
     private String telephoneNumber = "0980009898"; // телефон
 
-    public Reader(String FIO, int numberRTicket, String faculty, String dateOfBirth, String telephoneNumber) {
+    public Reader(String FIO, String numberRTicket, String faculty, String dateOfBirth, String telephoneNumber) {
         this.FIO = FIO;
         this.numberRTicket = numberRTicket;
         this.faculty = faculty;
@@ -15,7 +15,7 @@ public class Reader {
         this.telephoneNumber = telephoneNumber;
     }
 
-    public Book() {
+    public Reader() {
 
     }
 
@@ -27,11 +27,11 @@ public class Reader {
         this.FIO = FIO;
     }
 
-    public int getNumberRTicket() {
+    public String getNumberRTicket() {
         return numberRTicket;
     }
 
-    public void setNumberRTicket(int numberRTicket) {
+    public void setNumberRTicket(String numberRTicket) {
         this.numberRTicket = numberRTicket;
     }
 
