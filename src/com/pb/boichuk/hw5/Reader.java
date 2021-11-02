@@ -1,11 +1,23 @@
 package com.pb.boichuk.hw5;
 
 public class Reader {
-    private String FIO;
-    private int numberRTicket;
-    private String faculty;
-    private String dateOfBirth;
-    private String telephoneNumber;
+    private String FIO = "Петров В. В."; // ФИО
+    private int numberRTicket = "000001";  // номер читательского билета
+    private String faculty = "названиеФакультета";  // факультет
+    private String dateOfBirth = "01.01.1990"; // дата рождения
+    private String telephoneNumber = "0980009898"; // телефон
+
+    public Reader(String FIO, int numberRTicket, String faculty, String dateOfBirth, String telephoneNumber) {
+        this.FIO = FIO;
+        this.numberRTicket = numberRTicket;
+        this.faculty = faculty;
+        this.dateOfBirth = dateOfBirth;
+        this.telephoneNumber = telephoneNumber;
+    }
+
+    public Book() {
+
+    }
 
     public String getFIO() {
         return FIO;
@@ -45,5 +57,11 @@ public class Reader {
 
     public void setTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
+    }
+
+    String getInfo() {
+        return "[ФИО: " + FIO + ", номер читательского билета: "
+                + numberRTicket + ", факультет: " + faculty + ", дата рождения: "
+                + dateOfBirth + ", телефон: " + telephoneNumber + "]";
     }
 }

@@ -6,6 +6,8 @@ public class Library {
         Book book2 = new Book();
         Book book3 = new Book();
 
+        Reader reader1 = new Reader();
+
         book1.setName("Name_Book1");
         book2.setName("Name_Book2");
         book3.setName("Name_Book3");
