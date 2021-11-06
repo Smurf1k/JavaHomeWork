@@ -63,24 +63,24 @@ public class Reader {
         System.out.println(FIO + " взял 3 книги");
     }
 
-    public void takeBook(String FIO, String faculty){
-        System.out.println(FIO + faculty + " взял книги: Приключения, Словарь, Энциклопедия");
+    public void takeBook(String FIO, Book book1){
+        System.out.println(FIO + " имеет номер читательского билета " + book1.getAuthor());
     }
 
-    public void takeBook(String FIO, String faculty, String telephoneNumber){
-        System.out.println(FIO + telephoneNumber + " взял книги: Приключения (Иванов И. И. 2000 г.), Словарь (Сидоров А. В 1980 г.), Энциклопедия (Гусев К. В. 2010 г.)");
+    public void takeBook(String FIO, String numberRTicket, String telephoneNumber){
+        System.out.println(FIO + " имеет номер читательского билета: " + numberRTicket + " и номер: " + telephoneNumber);
     }
 
     public void returnBook(String FIO){
         System.out.println(FIO + " вернул 3 книги");
     }
 
-    public void returnBook(String FIO, String faculty){
-        System.out.println(FIO + faculty + " вернул книги: Приключения, Словарь, Энциклопедия");
+    public void returnBook(String FIO, String numberRTicket){
+        System.out.println(FIO + " имеет номер читательского билета " + numberRTicket);
     }
 
-    public void returnBook(String FIO, String faculty, String telephoneNumber){
-        System.out.println(FIO + telephoneNumber + " вернул книги: Приключения (Иванов И. И. 2000 г.), Словарь (Сидоров А. В 1980 г.), Энциклопедия (Гусев К. В. 2010 г.)");
+    public void returnBook(String FIO, String numberRTicket, String telephoneNumber){
+        System.out.println(FIO + " имеет номер читательского билета: " + numberRTicket + " и номер: " + telephoneNumber);
     }
 
 
