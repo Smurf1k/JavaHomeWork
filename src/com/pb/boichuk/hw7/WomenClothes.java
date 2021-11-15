@@ -1,4 +1,5 @@
 package com.pb.boichuk.hw7;
 
-public class WomenClothes {
+public interface WomenClothes {
+    void dressWomen(String text);
 }
